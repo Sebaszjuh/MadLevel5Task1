@@ -32,7 +32,7 @@ class AddNoteFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         btnSave.setOnClickListener {
-//            saveNote()
+            saveNote()
         }
 
         observeNote()
@@ -47,21 +47,20 @@ class AddNoteFragment : Fragment() {
             }
         })
 
-//        viewModel.error.observe(viewLifecycleOwner, Observer { message ->
-//            Toast.makeText(activity, message, Toast.LENGTH_SHORT).show()
-//        })
-//
-//        viewModel.success.observe(viewLifecycleOwner, Observer { success ->
-//            //"pop" the backstack, this means we destroy this fragment and go back to the RemindersFragment
-//            findNavController().popBackStack()
-//            hideKeyboard()
-//        })
+        viewModel.error.observe(viewLifecycleOwner, Observer { message ->
+            Toast.makeText(activity, message, Toast.LENGTH_SHORT).show()
+        })
+
+        viewModel.success.observe(viewLifecycleOwner, Observer { success ->
+            //"pop" the backstack, this means we destroy this fragment and go back to the RemindersFragment
+            findNavController().popBackStack()
+        })
     }
 
-//    private fun saveNote() {
-//        viewModel.updateNote(
-//            tilNoteTitle.editText?.text.toString(),
-//            tilNoteText.editText?.text.toString()
-//        )
-//    }
+    private fun saveNote() {
+        viewModel.updateNote(
+            tilNoteTitle.editText?.text.toString(),
+            tilNoteText.editText?.text.toString()
+        )
+    }
 }
