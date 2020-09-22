@@ -11,10 +11,18 @@
 
 <!--    strings used for notepad fragment-->
     <string name="myNotepad">My Notepad</string>
-    <string name="dateEdited">Last updated: %d</string>
+    <string name="dateEdited">Last updated: %1s</string>
 
 <!--    Strings used for add note fragment-->
     <string name="save">Save</string>
     <string name="titleInput">Note</string>
     <string name="title">Title</string>
+
+
+    <string name="note_text">Note</string>
+    <string name="note_title">Title</string>
+    <string name="note_pad_title">My Notepad</string>
+    <string name="edit_note">Edit Note</string>
+    <string name="save_note">Save</string>
+    <string name="no_note_yet">No Note yet!</string>
 </resources>
